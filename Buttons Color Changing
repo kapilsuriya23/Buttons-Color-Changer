@@ -8,30 +8,51 @@
         }
         h1{
             text-align: center;
-            font-size: 30px;
+            font-size: 40px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         }
 
         button { 
             margin: 10px;
-            font-size: 30px;
+            font-size: 40px;
             cursor: pointer;
         }
     </style>
 </head>
 <body>
     <h1>Click the buttons to change backgroundColor!!</h1>
-    <button onclick="changeColor('Red')">Red</button>
-    <button onclick="changeColor('green')">Green</button>
-    <button onclick="changeColor('Blue')">Blue</button>
-    <button onclick="resetColor()">Reset</button>
-
+    <div class="button">
+    <button id="b1" onclick="b1()">Red</button>
+    <button id="b2" onclick="b2()">Green</button>
+    <button id="b3" onclick="b3()">Blue</button>
+    <button id="b4" onclick="resetColor()">Reset</button>
+    </div>
     <script>
-        function changeColor(color) {
-            document.body.style.backgroundColor = color;
+        function b1() {
+            document.getElementById("b1").style.backgroundColor="red";
+            document.getElementById("b2").style.backgroundColor="";
+            document.getElementById("b3").style.backgroundColor="";
+            document.body.style.backgroundColor="red";
+            
         }
-
+        function b2() {
+            document.getElementById("b2").style.backgroundColor="green";
+            document.getElementById("b1").style.backgroundColor="";
+            document.getElementById("b3").style.backgroundColor="";
+            document.body.style.backgroundColor="green";
+            
+        }
+        function b3() {
+            document.getElementById("b3").style.backgroundColor="blue";
+            document.getElementById("b2").style.backgroundColor="";
+            document.getElementById("b1").style.backgroundColor="";
+            document.body.style.backgroundColor="blue";
+            
+        }
         function resetColor() {
+            document.getElementById("b3").style.backgroundColor="";
+            document.getElementById("b2").style.backgroundColor="";
+            document.getElementById("b1").style.backgroundColor="";
             document.body.style.backgroundColor = '';
         }
     </script>
