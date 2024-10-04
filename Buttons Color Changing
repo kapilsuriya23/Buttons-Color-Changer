@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Color Change</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        h1{
+            text-align: center;
+            font-size: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        button { 
+            margin: 10px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Click the buttons to change backgroundColor!!</h1>
+    <button onclick="changeColor('Red')">Red</button>
+    <button onclick="changeColor('green')">Green</button>
+    <button onclick="changeColor('Blue')">Blue</button>
+    <button onclick="resetColor()">Reset</button>
+
+    <script>
+        function changeColor(color) {
+            document.body.style.backgroundColor = color;
+        }
+
+        function resetColor() {
+            document.body.style.backgroundColor = '';
+        }
+    </script>
+
+</body>
+</html>
